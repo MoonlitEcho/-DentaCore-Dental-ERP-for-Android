@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DentaCore" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/surface2</item>
+        <item name="colorOnPrimary">@color/bg</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text2</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+    <style name="Theme.DentaCore.Splash" parent="Theme.DentaCore">
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+    <style name="DarkDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorSurface">@color/surface2</item>
+        <item name="colorOnSurface">@color/text</item>
+        <item name="colorPrimary">@color/accent</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text2</item>
+        <item name="android:background">@color/surface2</item>
+    </style>
+    <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/surface</item>
+        <item name="titleTextColor">@color/text</item>
+        <item name="subtitleTextColor">@color/text2</item>
+    </style>
+    <style name="CardStyle" parent="">
+        <item name="android:background">@drawable/card_bg</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+    <style name="BtnPrimary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/bg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+    <style name="BtnSecondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/accent</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+    <style name="InputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/surface3</item>
+        <item name="boxBackgroundColor">@color/surface2</item>
+        <item name="hintTextColor">@color/text2</item>
+        <item name="android:textColorHint">@color/text3</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+    </style>
+</resources>

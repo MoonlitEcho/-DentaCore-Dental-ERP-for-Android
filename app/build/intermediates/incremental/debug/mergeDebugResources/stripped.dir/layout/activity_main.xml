@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface" app:elevation="0dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="🦷 DentaCore"
+                    android:textSize="22sp" android:textStyle="bold" android:textColor="@color/accent"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ERP" android:textSize="11sp" android:textColor="@color/text3"
+                    android:background="@drawable/chip_tooth" android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+            <EditText android:id="@+id/etSearch"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:layout_marginTop="12dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="16dp" android:hint="@string/search_hint"
+                android:textColor="@color/text" android:textColorHint="@color/text3"
+                android:textSize="14sp" android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawableTint="@color/text3" android:drawablePadding="8dp"/>
+        </LinearLayout>
+        <!-- Stat row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp" android:weightSum="3">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:background="@drawable/stat_card_bg" android:padding="10dp"
+                android:layout_marginHorizontal="4dp" android:gravity="center">
+                <TextView android:id="@+id/tvPatientCount" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="0"
+                    android:textSize="22sp" android:textStyle="bold" android:textColor="@color/accent"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Patients" android:textSize="11sp" android:textColor="@color/text3"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:background="@drawable/stat_card_bg" android:padding="10dp"
+                android:layout_marginHorizontal="4dp" android:gravity="center">
+                <TextView android:id="@+id/tvRevenue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Rs.0"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/accent3"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Collected" android:textSize="11sp" android:textColor="@color/text3"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:background="@drawable/stat_card_bg" android:padding="10dp"
+                android:layout_marginHorizontal="4dp" android:gravity="center">
+                <TextView android:id="@+id/tvDue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Rs.0"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/warn"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Outstanding" android:textSize="11sp" android:textColor="@color/text3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPatients"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="12dp" android:clipToPadding="false"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAnalytics"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:layout_marginBottom="80dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        app:backgroundTint="@color/accent2" app:tint="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddPatient"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:text="New Patient" android:textColor="@color/bg"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconTint="@color/bg" app:backgroundTint="@color/accent"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

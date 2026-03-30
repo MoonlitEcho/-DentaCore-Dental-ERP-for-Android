@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface" style="@style/AppToolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Patient Info Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/card_bg"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤  Patient Info" android:textSize="16sp"
+                        android:textStyle="bold" android:textColor="@color/accent"
+                        android:layout_weight="1"/>
+                    <Button android:id="@+id/btnEditPatient"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Edit" android:textColor="@color/accent"
+                        android:background="@drawable/btn_outline" android:textSize="12sp"
+                        android:paddingHorizontal="16dp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="20sp"
+                    android:textStyle="bold" android:textColor="@color/text" android:layout_marginBottom="6dp"/>
+                <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="14sp"
+                    android:textColor="@color/text2" android:layout_marginBottom="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="6dp">
+                    <TextView android:id="@+id/tvDob" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:textSize="13sp" android:textColor="@color/text3"/>
+                    <TextView android:id="@+id/tvGender" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textColor="@color/text3" android:layout_marginEnd="12dp"/>
+                    <TextView android:id="@+id/tvBlood" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textColor="@color/danger"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvAllergies" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/warn" android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <!-- Billing Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/card_bg"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💰  Billing Summary" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="@color/accent3"
+                    android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:weightSum="3">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvTotalBilled" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="18sp"
+                            android:textStyle="bold" android:textColor="@color/text"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Billed" android:textSize="11sp" android:textColor="@color/text3"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvTotalPaid" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="18sp"
+                            android:textStyle="bold" android:textColor="@color/accent3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Paid" android:textSize="11sp" android:textColor="@color/text3"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/tvBalance" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="16sp"
+                            android:textStyle="bold" android:textColor="@color/warn"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Balance" android:textSize="11sp" android:textColor="@color/text3"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Teeth Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/card_bg"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🦷  Affected Teeth" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="@color/accent2"
+                    android:layout_marginBottom="10dp"/>
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupTeeth"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Voice Note Card -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/card_bg"
+                android:padding="16dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🎙  Voice Notes" android:textSize="16sp"
+                    android:textStyle="bold" android:textColor="@color/accent"
+                    android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btnRecord"
+                        android:layout_width="0dp" android:layout_height="48dp"
+                        android:layout_weight="1" android:text="🎙 Record Voice Note"
+                        android:textColor="@color/bg" android:textSize="13sp"
+                        android:background="@drawable/btn_accent" android:layout_marginEnd="8dp"/>
+                    <Button android:id="@+id/btnPlay"
+                        android:layout_width="0dp" android:layout_height="48dp"
+                        android:layout_weight="1" android:text="▶ Play Voice Note"
+                        android:textColor="@color/accent" android:textSize="13sp"
+                        android:background="@drawable/btn_outline" android:enabled="false"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Prescriptions -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="📋  Visit History"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text"/>
+                <Button android:id="@+id/btnNewPrescription"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="+ New Visit" android:textColor="@color/bg"
+                    android:textSize="12sp" android:background="@drawable/btn_accent"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPrescriptions"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <View android:layout_width="match_parent" android:layout_height="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

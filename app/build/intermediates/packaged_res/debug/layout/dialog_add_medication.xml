@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="20dp"
+    android:background="@color/surface2">
+    <EditText android:id="@+id/etMedName" android:layout_width="match_parent"
+        android:layout_height="50dp" android:background="@drawable/input_bg"
+        android:paddingHorizontal="14dp" android:textColor="@color/text"
+        android:textColorHint="@color/text3" android:hint="Medicine name"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="10dp">
+        <EditText android:id="@+id/etDosage" android:layout_width="0dp"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:background="@drawable/input_bg" android:paddingHorizontal="14dp"
+            android:textColor="@color/text" android:textColorHint="@color/text3"
+            android:hint="Dosage (500mg)" android:layout_marginEnd="8dp"/>
+        <EditText android:id="@+id/etFrequency" android:layout_width="0dp"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:background="@drawable/input_bg" android:paddingHorizontal="14dp"
+            android:textColor="@color/text" android:textColorHint="@color/text3"
+            android:hint="Freq (1-0-1)"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText android:id="@+id/etDuration" android:layout_width="0dp"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:background="@drawable/input_bg" android:paddingHorizontal="14dp"
+            android:textColor="@color/text" android:textColorHint="@color/text3"
+            android:hint="Duration (5 days)" android:layout_marginEnd="8dp"/>
+        <EditText android:id="@+id/etInstructions" android:layout_width="0dp"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:background="@drawable/input_bg" android:paddingHorizontal="14dp"
+            android:textColor="@color/text" android:textColorHint="@color/text3"
+            android:hint="After food"/>
+    </LinearLayout>
+</LinearLayout>

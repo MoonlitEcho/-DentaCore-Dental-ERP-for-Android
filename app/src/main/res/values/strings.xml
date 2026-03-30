@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DentaCore</string>
+    <string name="patients">Patients</string>
+    <string name="new_patient">New Patient</string>
+    <string name="analytics">Analytics</string>
+    <string name="search_hint">Search patients…</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="download_pdf">Download PDF</string>
+    <string name="add_medication">+ Add Medication</string>
+    <string name="select_teeth">Select Treated Teeth</string>
+    <string name="new_prescription">+ New Prescription</string>
+</resources>

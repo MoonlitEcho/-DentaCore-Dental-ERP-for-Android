@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/item_prescription.xml",
+        "source": "com.dentacore.app-main-38:/layout/item_prescription.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/item_patient.xml",
+        "source": "com.dentacore.app-main-38:/layout/item_patient.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_splash.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/dialog_add_medication.xml",
+        "source": "com.dentacore.app-main-38:/layout/dialog_add_medication.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_patient_detail.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_patient_detail.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_add_patient.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_add_patient.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_analytics.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_analytics.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/activity_prescription.xml",
+        "source": "com.dentacore.app-main-38:/layout/activity_prescription.xml"
+    },
+    {
+        "merged": "com.dentacore.app-mergeDebugResources-35:/layout/item_medication_row.xml",
+        "source": "com.dentacore.app-main-38:/layout/item_medication_row.xml"
+    }
+]

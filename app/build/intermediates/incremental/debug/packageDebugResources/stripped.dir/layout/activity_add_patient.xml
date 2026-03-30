@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface" style="@style/AppToolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Name -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Full Name *" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etName" android:layout_width="match_parent"
+                android:layout_height="50dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:textColor="@color/text"
+                android:textColorHint="@color/text3" android:hint="Patient full name"
+                android:inputType="textPersonName" android:layout_marginBottom="14dp"/>
+            <!-- Phone -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Phone *" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etPhone" android:layout_width="match_parent"
+                android:layout_height="50dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:textColor="@color/text"
+                android:textColorHint="@color/text3" android:hint="+91 XXXXX XXXXX"
+                android:inputType="phone" android:layout_marginBottom="14dp"/>
+            <!-- Email -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Email" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etEmail" android:layout_width="match_parent"
+                android:layout_height="50dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:textColor="@color/text"
+                android:textColorHint="@color/text3" android:hint="email@example.com"
+                android:inputType="textEmailAddress" android:layout_marginBottom="14dp"/>
+            <!-- DOB -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date of Birth" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etDob" android:layout_width="match_parent"
+                android:layout_height="50dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:textColor="@color/text"
+                android:textColorHint="@color/text3" android:hint="DD/MM/YYYY"
+                android:layout_marginBottom="14dp"/>
+            <!-- Gender & Blood Group row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Gender" android:textSize="12sp" android:textColor="@color/text2"
+                        android:layout_marginBottom="4dp"/>
+                    <Spinner android:id="@+id/spGender" android:layout_width="match_parent"
+                        android:layout_height="50dp" android:background="@drawable/input_bg"
+                        android:paddingHorizontal="10dp" android:spinnerMode="dropdown"
+                        android:popupBackground="@color/surface2"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Blood Group" android:textSize="12sp" android:textColor="@color/text2"
+                        android:layout_marginBottom="4dp"/>
+                    <Spinner android:id="@+id/spBlood" android:layout_width="match_parent"
+                        android:layout_height="50dp" android:background="@drawable/input_bg"
+                        android:paddingHorizontal="10dp" android:spinnerMode="dropdown"
+                        android:popupBackground="@color/surface2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Address -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Address" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etAddress" android:layout_width="match_parent"
+                android:layout_height="80dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:paddingTop="12dp"
+                android:textColor="@color/text" android:textColorHint="@color/text3"
+                android:hint="Full address" android:gravity="top" android:inputType="textMultiLine"
+                android:layout_marginBottom="14dp"/>
+            <!-- Allergies -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Known Allergies" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etAllergies" android:layout_width="match_parent"
+                android:layout_height="50dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:textColor="@color/text"
+                android:textColorHint="@color/text3" android:hint="e.g. Penicillin, Latex"
+                android:layout_marginBottom="14dp"/>
+            <!-- Medical History -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Medical History" android:textSize="12sp" android:textColor="@color/text2"
+                android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etMedHistory" android:layout_width="match_parent"
+                android:layout_height="80dp" android:background="@drawable/input_bg"
+                android:paddingHorizontal="14dp" android:paddingTop="12dp"
+                android:textColor="@color/text" android:textColorHint="@color/text3"
+                android:hint="Diabetes, hypertension, etc." android:gravity="top"
+                android:inputType="textMultiLine" android:layout_marginBottom="20dp"/>
+            <Button android:id="@+id/btnSavePatient"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Save Patient" android:textColor="@color/bg"
+                android:textStyle="bold" android:textSize="16sp"
+                android:background="@drawable/btn_accent"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
